@@ -1,0 +1,15 @@
+<div class="todo" *ngIf="!todo.isEdit" [ngClass]="[todo.isDone ? 'done-todo' : 'todo-todo', todo.isDisabled ? 'disabled-todo' : '']" (click)="checkTodo()" > 
+    <i class="material-icons todo-checkbox" *ngIf="!todo.isDone">check</i>
+    <span class="todo-description">{{todo.description}}</span>
+    <div class="todo-buttons">
+        <div class="edit-todo" *ngIf="!todo.isDone">
+            <i class="material-icons" (click)="editMode()">edit</i>
+        </div>
+        <div class="delete-todo">
+            <i class="material-icons" (click)="removeTodo($event)">clear</i>
+        </div>
+    </div>
+</div>
+<div class="todo" *ngIf="todo.isEdit">
+    <input type="text" class="form-control edit-todo-input" [(ngModel)]="todo.description" (keyup.enter)="cancelEdit()" placeholder="Que voulez-vous faire?">
+</div>

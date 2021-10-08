@@ -1,0 +1,77 @@
+.todo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+}
+.todo-checkbox{
+    display: none;
+}
+.todo:hover .todo-checkbox{
+    display: flex;
+    color: #26a69a;
+}
+
+.todo-buttons{
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+    padding-left: 41px;
+}
+.edit-todo{
+    cursor: pointer;
+    padding-right: 7px;
+    color: #007bff;
+    opacity: .7;
+    display: none;
+}
+.edit-todo:hover{
+    opacity: 1;
+}
+
+.delete-todo:hover{
+    opacity: 1;
+}
+.todo:hover .delete-todo{
+    display: flex;
+}
+.todo:hover .edit-todo{
+    display: flex;
+}
+
+.edit-todo-input{
+    padding: 5px;
+    width: 100%;
+    padding-left: 10px;
+}
+.cancel-edit{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+    background: red;
+    color: #FFF;
+}
+
+.todo-todo{
+    opacity: 1;
+}
+.done-todo .todo-description{
+    opacity: .5;
+    text-decoration: line-through;
+}
+.delete-todo{
+    cursor: pointer;
+    color: #ee6e73;
+    opacity: .7;
+    display: none;
+    text-decoration: none !important;
+}
+.disabled-todo{
+    opacity: .5;
+    pointer-events:none;
+}

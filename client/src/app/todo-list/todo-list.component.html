@@ -1,0 +1,16 @@
+<div class="todo-container p-5">
+    <h1 class="text-center">Todo ({{todos?.length}})</h1>
+    <div class="todo-wrapper">
+        <app-todo *ngFor="let todo of todos" [todo]="todo" (todoChange)="onTodoChange($event)">
+        </app-todo>
+    </div>
+    <div class="add-todo" *ngIf="!isEditing">
+        <i class="material-icons add-todo-button" (click)="addTodo()">add</i>
+    </div>
+    <h1 class="mt-5 text-center" *ngIf="doneTodos.length > 0">Done ({{doneTodos?.length}})</h1>
+    <div class="todo-wrapper">
+
+    <app-todo *ngFor="let done of doneTodos" [todo]="done" (todoChange)="onTodoChange($event)">
+    </app-todo>
+</div>
+</div>
